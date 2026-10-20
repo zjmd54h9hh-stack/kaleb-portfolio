@@ -1,0 +1,241 @@
+
+/* ---------- Base styles ---------- */
+
+:root {
+  --background: #f7f5ef;
+  --surface: #ffffff;
+  --text: #252820;
+  --muted: #696b62;
+  --olive: #596747;
+  --olive-dark: #3e4b32;
+  --border: #e5e2d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--olive);
+  outline-offset: 5px;
+}
+
+/* ---------- Navigation ---------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 245, 239, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav > a {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+nav div {
+  display: flex;
+  gap: 28px;
+}
+
+/* ---------- Main layout ---------- */
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+section {
+  padding: 100px 0;
+  scroll-margin-top: 90px;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Hero section ---------- */
+
+#home {
+  min-height: 510px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#home > p:first-child {
+  color: var(--olive);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 12px 0 20px;
+  font-size: clamp(2.7rem, 7vw, 5.2rem);
+  letter-spacing: -0.055em;
+}
+
+#home > p:not(:first-child) {
+  max-width: 590px;
+  color: var(--muted);
+}
+
+#home > a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 22px;
+  background: var(--olive);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#home > a:hover {
+  background: var(--olive-dark);
+}
+
+/* ---------- Headings ---------- */
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.035em;
+}
+
+section > p {
+  color: var(--muted);
+}
+
+/* ---------- Project and service cards ---------- */
+
+#work article,
+#services article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+#work article {
+  margin-top: 32px;
+  max-width: 700px;
+}
+
+#work article p,
+#services article p {
+  color: var(--muted);
+}
+
+#work article a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--olive-dark);
+  font-weight: 700;
+}
+
+#services article {
+  margin-top: 16px;
+}
+
+#services h3,
+#work h3 {
+  margin-top: 0;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 28px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- Mobile layout ---------- */
+
+@media (max-width: 600px) {
+  nav {
+    padding: 16px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav div {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  main {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 68px 0;
+  }
+
+  #home {
+    min-height: 440px;
+  }
+
+  #work article,
+  #services article {
+    padding: 22px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
