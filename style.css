@@ -398,3 +398,60 @@ footer {
 
 
 
+/* ---------- About section ---------- */
+
+#about {
+  max-width: 820px;
+}
+
+#about .section-intro {
+  max-width: 680px;
+  line-height: 1.9;
+}
+
+/* ---------- Contact section ---------- */
+
+#contact {
+  padding: 90px 36px;
+  margin-bottom: 40px;
+  background: #eeeee5;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+#contact h2 {
+  max-width: 600px;
+}
+
+#contact .section-intro {
+  max-width: 580px;
+}
+
+.contact-note {
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 22px;
+  background: var(--olive);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-button:hover {
+  background: var(--olive-dark);
+}
+
+@media (max-width: 600px) {
+  #contact {
+    padding: 48px 22px;
+  }
+}
+
+
+
